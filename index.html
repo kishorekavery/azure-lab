@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <!-- Google tag (gtag.js)
+     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T8XD047HE5"></script>
+     <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+ 
+     gtag('config', 'G-T8XD047HE5');
+     </script> -->
+     
+     <title>Cogxta bot | Zero code framework </title>
+     <link rel="shortcut icon" href="static/images/logo_icon.png?4">
+
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Cogxta - 404 not found">
+
+    <!-- ========== Start Stylesheet ========== -->
+    <link href="static/assets/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="static/assets/bootstrap-icons.css"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="static/assets/all.min.css">
+    <link href="static/assets/css/themify-icons.css" rel="stylesheet" />
+    <link href="static/assets/css/flaticon-set.css" rel="stylesheet" />
+    <link href="static/assets/css/magnific-popup.css" rel="stylesheet" />
+    <link href="static/assets/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="static/assets/css/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="static/assets/css/animate.css" rel="stylesheet" />
+    <link href="static/assets/css/bootsnav.css" rel="stylesheet" />
+    <link href="static/assets/style.css" rel="stylesheet">
+    <link href="static/assets/css/responsive.css" rel="stylesheet" />
+    <!-- ========== End Stylesheet ========== -->
+    <script src="static/assets/js/jquery-1.12.4.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="static/assets/js/html5/html5shiv.min.js"></script>
+      <script src="static/assets/js/html5/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ========== Google Fonts ========== -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&display=swap" rel="stylesheet"> -->
+    
+    
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    
+    <!-- <link rel="stylesheet" href="static/assetsv1/css/chat.css"> -->
+    <script type="application/ld+json">{
+		"@context": "https://schema.org",
+		"@type": "Organization",
+		"name": "Zero Code chatbot platform",
+		"url": "https://cogxta.com",
+		"logo": "https://cogxta.com/chatUI/logo_black.png?4",
+        "description": "cogxta.ai is a smart chatbot framework with adaptive intelligence and domain agnostic learning architecture to train Q&A data, documents and conversational data."
+    }</script>
+
+</head>
+
+<body>
+
+    <!-- Preloader Start -->
+    <div class="se-pre-con"></div>
+    <!-- Preloader Ends -->
+  
+    <section class="chatbox_home d-flex">
+        <div class="left-section bg-white d-flex flex-column justify-content-between">
+            <div class="text-center">
+                <div class="text-center p-3">
+                    <img
+                        src="static/images/newlogo.png"
+                        width="150"
+                    />
+                    <h5 class="mt-2">Welcome to Cogxta Bot</h5>
+                </div>
+                <hr>
+                <div style="text-align: left; padding-left: 20px;">
+                    <a href="/admin" target="_blank"><i class="fas fa-cog" style="padding: 10px 10px;"></i>Settings</a>
+                </div>
+            </div>
+            
+            <div class="text-center p-3">
+                <a class="nav-link fs-6 text signinlink btn circle btn-md btn-gradient wow fadeInUp px-5 py-2" href="javascript:;" data-bs-toggle="modal"
+                data-bs-target="#loginModal" onclick="login()">Login</a>
+                <div class="nav-item dropdown fs-6" id="ustatus">
+                    <a href="#" id="user_mail" class="nav-link dropdown-toggle ustatus text-dark fw-bold" data-bs-toggle="dropdown" style="border-color: #fff;"></a>
+                    <div class="mt-2">
+                        <a href="javascript:;" class="btn btn-dark" onclick="signout();">Signout</a>
+                    </div>
+                </div>
+                <br>
+            </div>
+
+        </div>
+        <div class="right-section">
+            <div class="d-flex d-lg-none align-items-center justify-content-between border-bottom">
+                <img
+                    src="static/assets/img/logo_black.png"
+                    width="150"
+                    class="logo"
+                    alt="Logo"
+                />
+                <button
+                    type="button"
+                    class="navbar-toggle"
+                    >
+                    <i class="fa fa-bars text-dark"></i>
+                </button>
+            </div>
+            <!-- <h5 class="fs-6 text-center fw-medium">Hybrid architecture for on-prim chatbot implementations with the power of Generative AI and unique conversational schema with Dynamic Context Controller (DC2).</h5> -->
+            <div id="knowledgeBotId" class="knowledgeBot position-relative shadow-sm" style="height: 100vh; background-color: #f4f7fc;">
+                <!-- <h5 class="px-3 py-2 m-0 chatbot_name btn-gradient" style="color: #f1f1f1;">Bot: <span>Test</span></h5> -->
+                <div class="chat_box fancyscroll chat_box_colors_a w-100 p-4" id="mainBody">
+                    <div class="chat_message_wrapper ps-2">
+                        <ul class="chat_message list-unstyled">
+                            <li>
+                                <div id="chatDescriptionId" class="wordBreak fs-5">
+                                    <img src="static/images/robot-assistant.png" width="50px"
+                                        style="margin-left: -12px;">
+                                    Hello, I'm here to help you.
+                                </div>
+                                <span class="chat_message_time" id="spanId"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="chatListId"></div>
+                </div>
+
+                <div class="chat_submit_box pt-4 px-4">
+                    <form>
+                        <div class="form-group">
+                            <div class="position-relative">
+                                <div>
+                                    <textarea
+                                        class="txtarea chatext border border-secondary py-2 px-3 w-100 fs-6"
+                                        rows="1" id="sendMsgId" placeholder="Type a message"
+                                        spellcheck="false"></textarea>
+                                        
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <b class="pe-3">Quick Help:</b>
+                                                <a href="javascript:;" class="fw-semibold text-primary m-0" onclick="cancelling();"><u>
+                                                Cancel this conversation</u></a>
+                                                <b class="text-primary">|</b>
+                                                <a href="javascript:;" class="fw-semibold text-primary m-0" onclick="correction();"><u>
+                                                        Modify my response</u></a>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-end">
+                                                <p id="status" class="mb-0 me-3"></p> 
+                                                <img src='static/images/micon.jpg' id="startButton" style="height: 40px;"></img>
+                                                <img src='static/images/micoff.jpg' id="stopButton" style="display: none; height: 40px;"></img>
+                                                
+                                                <img id="loader" src="static/images/loader.gif" style="width: 100px; display: none; margin: auto;"></img> 
+                                                <!-- <span style="font-size: 11px;">Powered By Cogxta</span> -->
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Full Screen Login Start -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" onclick="loginClose(event)" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form name="logform" method="post" class="logform">
+                        <div class="text-center mb-4">
+                            <img src="static/images/newlogo.png" width="150">
+                            <p class="modal-title mt-3 text-dark" id="exampleModalLabel"><strong>Please signIn to access the
+                                    platform</strong></p>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-lg-8 mx-auto">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                                    <input type="email" id="signin_mail" name="signin_mail" class="form-control"
+                                        placeholder="Enter Email" required>
+                                </div>
+                                <div class="input-group mb-4">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-key"></i></span>
+                                    <input type="password" id="signin_password" name="signin_password"
+                                        class="form-control" placeholder="Enter Password" required>
+                                </div>
+                                <div class="input-group">
+                                    <button type="submit" id="signin_btn" onclick="signin_call(event);"
+                                        class="btn btn-success mx-auto btn-gradient circle btn-sm">
+                                        <div class="spinner-border text-white spinner-border-sm login-spinner d-none"
+                                            role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                        </div>
+                                        <span>Sign In</span>
+                                    </button>
+                                </div>
+                                <p class="text-center text-dark py-4">
+                                    <strong>First time user? <a href="javascript:;" onclick="register()"
+                                            class="text-primary">SignUp</a> here.</strong>
+                                </p>
+                                <p class="text-center text-dark">
+                                    <a id="reset" class="text-primary" href="/reset"><strong>Forgot
+                                            password?</strong></a>
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Login End -->
+
+    <!-- Full Screen Register Start -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" onclick="registerClose(event)" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form method="post">
+                        <div class="text-center mb-4">
+                            <img src="static/images/newlogo.png" width="150">
+                            <p class="modal-title mt-3 text-dark" id="exampleModalLabel"><strong>Please register to access the
+                                    platform</strong></p>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-lg-8 mx-auto">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                    <input id="signup_name" type="text" placeholder="Enter Name" name="name" required=""
+                                        class="form-control">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="fa fa-mobile"></i></span>
+                                    <input id="signup_mobile" type="text" placeholder="91 99xxxxxxxx" name="mobile"
+                                        autocomplete="off" required="" class="form-control">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                                    <input id="signup_mail" type="email" placeholder="Enter Email" name="email"
+                                        autocomplete="off" required="" class="form-control">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="fa fa-globe"></i></span>
+                                    <input id="signup_org" type="text" placeholder="Company / College" name="org"
+                                        autocomplete="off" required class="form-control">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="fa fa-key"></i></span>
+                                    <input id="signup_password" type="password" placeholder="Enter Password" name="psw"
+                                        autocomplete="off" required="" class="form-control">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="fa fa-key"></i></span>
+                                    <input id="signup_repassword" type="password" placeholder="Re-enter Password"
+                                        name="psw" autocomplete="off" required="" class="form-control">
+                                </div>
+                                <div class="input-group">
+                                    <button type="submit" id="signup_btn" class="btn btn-success mx-auto btn-gradient circle btn-sm">
+                                        <div class="spinner-border text-white spinner-border-sm login-spinner d-none"
+                                            role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                        </div>
+                                        <span>Sign Up</span>
+                                    </button>
+                                </div>
+                                <p class="text-center text-dark py-4">
+                                    <strong>Existing user? <a href="javascript:;" onclick="login()"
+                                            class="text-primary">Login</a> here.</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Register End -->
+    <div class="modal fade" id="otpModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" onclick="close(event)" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="popup-form" action="#">
+                        <div class="text-center mb-4">
+                            <img src="static/images/newlogo.png" width="150">
+                            <p class="modal-title text-dark mt-3" id="exampleModalLabel"><strong>Enter the OTP Sent to your Mail
+                                    ID</strong></p>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-lg-8 mx-auto">
+                                <div class="row mb-4">
+                                    <div class="col-2 px-1"><input type="text" id='ist' class="form-control"
+                                            maxlength="1" onkeyup="clickEvent(this,'sec')" autocomplete="off"></div>
+                                    <div class="col-2 px-1"><input type="text" id="sec" class="form-control"
+                                            maxlength="1" onkeyup="clickEvent(this,'third')" autocomplete="off"></div>
+                                    <div class="col-2 px-1"><input type="text" id="third" class="form-control"
+                                            maxlength="1" onkeyup="clickEvent(this,'fourth')" autocomplete="off"></div>
+                                    <div class="col-2 px-1"><input type="text" id="fourth" class="form-control"
+                                            maxlength="1" onkeyup="clickEvent(this,'fifth')" autocomplete="off"></div>
+                                    <div class="col-2 px-1"><input type="text" id="fifth" class="form-control"
+                                            maxlength="1" onkeyup="clickEvent(this,'sixth')" autocomplete="off"></div>
+                                    <div class="col-2 px-1"><input type="text" id="sixth" class="form-control"
+                                            maxlength="1" autocomplete="off"></div>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <button type="button" id="verifyOtpBtn" class="btn btn-dark mx-auto btn-gradient circle btn-sm">
+                                        <div class="spinner-border text-white spinner-border-sm login-spinner d-none"
+                                            role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                        </div>
+                                        <span>Verify OTP</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Comments modal -->
+    <div class="modal fade" id="commentModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title text-dark">Comment</h5>
+                    <button type="button" onclick="close(event)" class="btn-close close" data-bs-dismiss="modal" aria-label="Close" data-imgid="yourImgId"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <form method="post" name="commntform">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="input-group mb-3">
+                                    <textarea placeholder="Enter Your Comments" name="comments" id="comments" required=""
+                                    class="form-control"></textarea>
+                                    <input type="hidden" name="imgid" id="imgid" />
+                                </div>
+                                <div class="text-end">
+                                    <button type="submit" onclick="addComment(event)" id="commbtn" class="btn btn-success btn-gradient circle btn-sm">
+                                        <div class="spinner-border text-white spinner-border-sm login-spinner d-none"
+                                            role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                        </div>
+                                        <span>Submit</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="static/assets/js/popper.min.js"></script>
+    <script src="static/assets/js/bootstrap.min.js"></script>
+    <script src="static/assets/js/equal-height.min.js"></script>
+    <script src="static/assets/js/jquery.appear.js"></script>
+    <script src="static/assets/js/jquery.easing.min.js"></script>
+    <script src="static/assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="static/assets/js/modernizr.custom.13711.js"></script>
+    <script src="static/assets/js/owl.carousel.min.js"></script>
+    <script src="static/assets/js/wow.min.js"></script>
+    <script src="static/assets/js/progress-bar.min.js"></script>
+    <script src="static/assets/js/isotope.pkgd.min.js"></script>
+    <script src="static/assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="static/assets/js/count-to.js"></script>
+    <script src="static/assets/js/YTPlayer.min.js"></script>
+    <script src="static/assets/js/circle-progress.js"></script>
+    <script src="static/assets/js/bootsnav.js"></script>
+    <script src="static/assets/js/main.js"></script>
+    <script class="u-script" type="text/javascript" src="static/chatUI/uijs.js" defer=""></script>
+    <script src="static/chatUI/api_config.js?3"></script>
+    <script src="static/assets/popper.min.js"></script>
+    <script src="static/chatUI/bots_util.js?2"></script>
+    <script src="static/chatUI/bots_func.js?2"></script>
+    <script src="static/chatUI/chat.js?2"></script>
+    <!-- <script src="static/chatUI/schema_config.js?1"></script> -->
+    <script src="static/chatUI/index.js"></script>
+
+
+    <script>
+        var stt_url = "http://localhost:5004/stt";
+        // var stt_url = "https://llm.cogxta.com/stt"
+        var listner_time = 20000;
+        
+        // const clickEvent = new MouseEvent('click');
+        
+        var input_param = {
+                "user": "",
+                "ai": "",
+                "level": 0,
+                "message": "",
+                "action":""
+            } 
+        
+        
+        function clear_history(){
+          recurinput = input_param;
+          recurinput["action"] = "clear";
+          fetch_api(recurinput, []);
+        }
+        
+        
+        async function fetch_api(recurinput, blob){
+           // Send audio data to Flask API
+            recurinput = JSON.stringify(recurinput);
+            document.getElementById('status').innerText = 'Processing...';
+            document.getElementById('loader').style.display = 'block';
+            var formData = new FormData();
+            formData.append('audio', blob);
+            formData.append('json', recurinput);
+        
+           await fetch(stt_url, {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        // alert(JSON.stringify(data));
+        
+                        recurinput = JSON.stringify(data);
+                        
+                        if (data["level"]==1){
+                          document.getElementById('sendMsgId').value = data["message"];
+                          fetch_api(recurinput, blob);
+                          // alert(data["level"]);
+                        }
+        
+                        else if (data["level"]==2){
+                          document.getElementById('sendMsgId').value = data["message"];
+                          // fetch_api(recurinput, blob);
+                          document.getElementById('status').innerText = 'Completed';
+                          document.getElementById('loader').style.display = 'none';
+                        //   speakText(data['ai']);
+                        //   document.dispatchEvent(clickEvent);
+                          document.getElementById('startButton').style.display = 'block';
+                          // alert(data["level"]);
+                        }
+                       
+                        /*
+                        else if (data["level"]==3){
+                          document.getElementById('sendMsgId').value = data['ai'];
+                          document.getElementById('status').innerText = 'Completed';
+                          document.getElementById('loader').style.display = 'none';
+                          speakText(data['ai']);
+                          document.dispatchEvent(clickEvent);
+                          document.getElementById('startButton').style.display = 'block';
+                          // alert(data["level"]);
+                        }
+                        */
+        
+                        else{
+                          document.getElementById('sendMsgId').value = data["message"];
+                          document.getElementById('loader').style.display = 'none';
+                          document.getElementById('status').innerText = '';
+                        }
+                        
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        document.getElementById('status').innerText = error;
+                    });
+        }
+        
+        let mediaRecorder;
+        let audioChunks = [];
+        
+        // Function to start capturing microphone input
+        function startCapture() {
+            // Update status message
+            document.getElementById('status').innerText = 'Listening...';
+            document.getElementById('sendMsgId').value = "";
+         
+            navigator.mediaDevices.getUserMedia({ audio: true })
+                .then(stream => {
+                    mediaRecorder = new MediaRecorder(stream);
+                    audioChunks.length = 0;
+                    mediaRecorder.addEventListener('dataavailable', event => {
+                        audioChunks.push(event.data);
+                    });
+                    mediaRecorder.addEventListener('stop', () => {
+                        var blob = new Blob(audioChunks, { 'type' : 'audio/mp3; codecs=opus' });
+                        recurinput = input_param;
+                        recurinput["action"] = "chat";
+                        fetch_api(recurinput, blob);
+        
+                        // const audioUrl = URL.createObjectURL(audioBlob);
+                        // const audio = new Audio(audioUrl);
+                        // audio.controls = true;
+                        // document.body.appendChild(audio);
+                       
+                    });
+                    mediaRecorder.start();
+        
+                    setTimeout(function() {
+                     stopCapture();
+                    }, listner_time);
+                
+                });
+                
+            // Update button states
+            document.getElementById('startButton').style.display = 'none';
+            document.getElementById('stopButton').style.display = 'block';
+        }
+        
+        // Function to stop capturing microphone input
+        function stopCapture() {
+            mediaRecorder.stop();
+            
+            // Update button states
+            document.getElementById('startButton').style.display = 'block';
+            document.getElementById('stopButton').style.display = 'none';
+        }
+        
+        // Event listeners for start and stop buttons
+        document.getElementById('startButton').addEventListener('click', startCapture);
+        document.getElementById('stopButton').addEventListener('click', stopCapture);
+        
+        
+        // // Function to handle button click event
+        // function startRecording() {
+        //     // Audio constraints
+        //     var constraints = { audio: {
+        //         sampleRate: 44100, // Sample rate (Hz)
+        //         channelCount: 2     // Number of audio channels (e.g., stereo)
+        //     }};
+        //     // Update status message
+        //     document.getElementById('status').innerText = 'Listening...';
+        //     document.getElementById('sendMsgId').value = "";
+        //     document.getElementById('recordButton').disabled = true;
+        
+        //     // Start capturing microphone input
+        //     navigator.mediaDevices.getUserMedia(constraints)
+        //     .then(function(stream) {
+        //         var mediaRecorder = new MediaRecorder(stream);
+        //         var chunks = [];
+        
+        //         // Event handler for when data is available
+        //         mediaRecorder.ondataavailable = function(event) {
+        //             chunks.push(event.data);
+        //         }
+        
+        //         // Event handler for when recording stops
+        //         mediaRecorder.onstop = function(event) {
+        //             var blob = new Blob(chunks, { 'type' : 'audio/mp3; codecs=opus' });
+        //             recurinput = input_param;
+        //             recurinput["action"] = "chat";
+        //             fetch_api(recurinput, blob);
+        //         }
+        
+        //         // Start recording
+        //         mediaRecorder.start();
+        
+        //         // Stop recording after 5 seconds (adjust as needed)
+        //         setTimeout(function() {
+        //             mediaRecorder.stop();
+        //         }, listner_time);
+        //     })
+        //     .catch(function(error) {
+        //         console.error('Error:', error);
+        //         document.getElementById('status').innerText = 'Error occurred.';
+        //     });
+        // }
+        
+        
+        
+        
+        // function startCounter() {
+        //   let count = listner_time/1000;
+        //   const counterElement = document.getElementById('counter');
+        
+        //   // Function to update the counter text and decrement count
+        //   function updateCounter() {
+        //     counterElement.textContent = count;
+        //     count--;
+        
+        //     // Stop the counter when it reaches zero
+        //     if (count < 0) {
+        //       clearInterval(intervalId);
+        //       counterElement.textContent = '';
+        //     }
+        //   }
+        
+        //   // Update the counter immediately and then every second
+        //   updateCounter();
+        //   const intervalId = setInterval(updateCounter, 1000);
+        // }
+        
+        
+        // Add event listener to the record button
+        // document.getElementById('recordButton').addEventListener('click', startRecording);
+        // document.getElementById('recordButton').addEventListener('click', startCounter);
+        
+        
+        
+        
+        // function speakText(text) {
+        //   // alert(text);
+        //   // Check if the browser supports the SpeechSynthesis API
+        //   if ('speechSynthesis' in window) {
+        //     // Create a new SpeechSynthesisUtterance object
+        //     const msg = new SpeechSynthesisUtterance();
+        
+        //     // Set the text to be spoken
+        //     msg.text = text;
+        
+        //     // Set the voice
+        //     msg.voice = speechSynthesis.getVoices().find(voice => voice.name === 'Google US English');
+        
+        //     // Optionally, you can set other properties such as rate, pitch, etc.
+        //     // msg.rate = 1.0; // Speaking rate
+        //     // msg.pitch = 1.0; // Speaking pitch
+        
+        //     // Speak the text when user activates
+        //     document.addEventListener('click', function() {
+        //       speechSynthesis.speak(msg);
+        //     }, { once: true });
+        //   } else {
+        //     alert('Speech synthesis not supported in this browser.');
+        //   }
+        // }
+        
+        // Example usage:
+        //speakText("Welcome to coxta");
+        
+        
+        
+        </script>
+        
+
+
+</body>
+
+</html>
